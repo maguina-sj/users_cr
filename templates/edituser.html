@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Edit User</title>
+</head>
+<body>
+    <h1>Edit User {{edit_user.id}}</h1>
+    <form action='/users/{{edit_user.id}}/edit' method="POST" class="bg-light text-dark p-4 rounded col-6 mx-auto">
+        <label for="first_name">First Name: </label>
+        <input type="text" value="{{edit_user.first_name}}" name="first_name" class="form-control">
+        <label for="last_name">Last Name:</label>
+        <input type="text" value="{{edit_user.last_name}}" name="last_name" class="form-control">
+        <label for="email" >Email:</label>
+        <input type="text" value="{{edit_user.email}}" name="email" class="form-control">
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
